@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Exercise, Exercise1 } from './exercise/exercises'
+import { Exercise, Exercise1, Exercise2 } from './exercise/exercises'
 
 @Component({
   selector: 'my-app',
@@ -11,5 +11,9 @@ export class AppComponent  {
 
   public loadExercise1() {
     this.currentExercise = new Exercise1();
+  }
+
+    public loadExercise2() {
+    this.currentExercise = new Exercise2();
   }
 }

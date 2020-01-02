@@ -1,7 +1,7 @@
-<div class="header" *ngIf="exercise.infoUrl">Info:
- <a [href]="exercise.infoUrl" target="_blank">{{exercise.infoUrlName}}</a>
-</div>
-
+<div class="header" *ngIf="exercise.infoUrl">Info:</div>
+<p>{{exercise.info}}</p>
+<p><a [href]="exercise.infoUrl" target="_blank">{{exercise.infoUrlName}}</a></p>
+ 
 <div class="header">Code:</div>
 <pre>{{exercise.code}}</pre>
 <button mat-raised-button color="primary" (click)="toggleSolution()">{{showSolution ? 'Hide' : 'Show'}} Solution</button>

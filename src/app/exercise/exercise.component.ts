@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Exercise } from './exercises';
 
 @Component({
@@ -6,18 +6,15 @@ import { Exercise } from './exercises';
   templateUrl: './exercise.component.html',
   styleUrls: ['./exercise.component.scss']
 })
-export class ExerciseComponent implements OnInit {
-  @Input() public exercise: Exercise;
-  public showSolution: boolean;
-  public logs: Array<string>;
-
-  constructor() { 
+export class ExerciseComponent {
+  @Input() public set currentExercise(newExercise: Exercise) {
+    this.exercise = newExercise;
     this.showSolution = false;
     this.logs = [];
   }
-
-  ngOnInit() {
-  }
+  public exercise: Exercise;
+  public showSolution: boolean;
+  public logs: Array<string>;
 
   public toggleSolution() {
     this.showSolution = !this.showSolution;

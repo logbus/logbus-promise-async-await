@@ -1,5 +1,6 @@
 <div class="header">Click on an Exercise-Button to see the Exercise</div>
 <div>
-  <button mat-raised-button color="primary" (click)="loadExercise1()">Example-1</button>
+  <button mat-raised-button color="primary" (click)="loadExercise1()">Ex-1</button>
+  <button mat-raised-button color="primary" (click)="loadExercise2()">Ex-2</button>
 <div>
-<app-exercise *ngIf="currentExercise" [exercise]="currentExercise"></app-exercise>
+<app-exercise *ngIf="currentExercise" [currentExercise]="currentExercise"></app-exercise>
