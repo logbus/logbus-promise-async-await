@@ -1,5 +1,8 @@
+<div class="header" *ngIf="exercise.infoUrl">Info:
+ <a [href]="exercise.infoUrl" target="_blank">{{exercise.infoUrlName}}</a>
+</div>
+
 <div class="header">Code:</div>
-<a *ngIf="excercise.infoUrl" [href]="exercise.infoUrl">{{exercise.infoUrlName}}</a>
 <pre>{{exercise.code}}</pre>
 <button mat-raised-button color="primary" (click)="toggleSolution()">{{showSolution ? 'Hide' : 'Show'}} Solution</button>
 <button mat-raised-button color="primary" (click)="runExercise()">Run Exercise</button>
@@ -10,8 +13,7 @@
   <a *ngIf="exercise.solutionUrl" [href]="exercise.url" target="_blank">Link to Solution</a>
 </div>
 
-
-<div class="header">Log</div>
+<div class="header">Log:</div>
 <pre>
 <div *ngFor="let log of logs">{{log}}</div>
 </pre>
