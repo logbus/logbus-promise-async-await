@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Exercise, Exercise1, Exercise2 } from './exercise/exercises'
+import { Exercise } from './exercises/exercise'
+import { Exercise01 } from './exercises/exercise01'
+import { Exercise02 } from './exercises/exercise02'
 
 @Component({
   selector: 'my-app',
@@ -10,10 +12,10 @@ export class AppComponent  {
   public currentExercise: Exercise;
 
   public loadExercise1() {
-    this.currentExercise = new Exercise1();
+    this.currentExercise = new Exercise01();
   }
 
     public loadExercise2() {
-    this.currentExercise = new Exercise2();
+    this.currentExercise = new Exercise02();
   }
 }
