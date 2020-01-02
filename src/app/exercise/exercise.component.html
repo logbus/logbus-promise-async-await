@@ -1,0 +1,17 @@
+<div class="header">Code:</div>
+
+<pre>{{exercise.code}}</pre>
+<button mat-raised-button color="primary" (click)="toggleSolution()">{{showSolution ? 'Hide' : 'Show'}} Solution</button>
+<button mat-raised-button color="primary" (click)="runExercise()">Run Exercise</button>
+
+<div class="header">Solution:</div>
+<div *ngIf="showSolution">
+  <pre>{{exercise.solution}}</pre>
+  <a *ngIf="exercise.url" [href]="exercise.url" target="_blank">Link to Solution</a>
+</div>
+
+
+<div class="header">Log</div>
+<pre>
+<div *ngFor="let log of logs">{{log}}</div>
+</pre>

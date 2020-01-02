@@ -1,6 +1,4 @@
 <div>
-  <button mat-raised-button color="primary">Example-1</button>
+  <button mat-raised-button color="primary" (click)="loadExercise1()">Example-1</button>
 <div>
-<h2>Log</h2>
-<p *ngFor="let log of logs">{{log}}<p>
-</div>
+<app-exercise *ngIf="currentExercise" [exercise]="currentExercise"></app-exercise>
