@@ -2,9 +2,11 @@ const lf = '\n';
 
 export abstract class Exercise {
   public name: string;
+  public infoUrl: string;
+  public infoUrlName: string;
   public code: string;
   public solution: string;
-  public url: string;
+  public solutionUrl: string;
   protected doLog: (string) => void;
 
   public abstract run(doLog: (string) => void);
@@ -17,7 +19,9 @@ export class Exercise1 extends Exercise {
   public constructor() {
     super();
     this.name = 'Excercise-1';
-    this.url = 'https://www.youtube.com/watch?v=bfxglBVSNDI&list=WL&index=70&t=0s';
+    this.solutionUrl = 'https://www.youtube.com/watch?v=bfxglBVSNDI&list=WL&index=70&t=0s';
+    this.infoUrl= 'https://www.youtube.com/watch?v=cCOL7MC4Pl0&list=WL&index=66';
+    this.infoUrlName = 'What is the event loop (Tasks, MikroTasks, Rendering';
     this.code =
 '// What is logged when you call the run() method?' + lf +  
 'public run() {' + lf +
