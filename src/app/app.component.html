@@ -3,7 +3,7 @@
   <button 
     *ngFor="let exercise of exercises" 
     mat-raised-button color="primary" 
-    (click)="currentExercise = exercise">exercise.name
+    (click)="currentExercise = exercise">{{exercise.name}}
   </button>
 <div>
 <app-exercise *ngIf="currentExercise" [currentExercise]="currentExercise"></app-exercise>
