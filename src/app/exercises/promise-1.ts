@@ -5,18 +5,14 @@ export class ExerciseAsync1 extends Exercise {
 
   public constructor() {
     super();
-    this.name = "Async-1";
+    this.name = "Promise-1";
     this.question = "What is logged when you call the run() method?";
     this.info = `
-Event loop and micro tasks as results of promises.
-Micro tasks are only executed when the call stack is empty.
-In this example the two parts of an expression are evaluated at two different timeslots,
-the first part directly and the second part as a micro tast later.
 `;
-    this.infoUrl =
-      "https://www.youtube.com/watch?v=cCOL7MC4Pl0&list=WL&index=66";
-    this.infoUrlName = "What is the event loop (Tasks, MikroTasks, Rendering)";
-    this.code = `private x: number;
+    this.infoUrl = null;
+    this.infoUrlName = null;
+    this.code = 
+`private x: number;
 
 public run() {
   this.x = 0;
@@ -32,7 +28,7 @@ private async compute() {
 `;
     this.solutionUrl = null;
     this.solution = `run() x = 1
-compute() x = 2
+compute() and x = 2
 
 public run() {
   this.x = 0;
@@ -47,7 +43,6 @@ private async compute(): Promise<any> {
            // and this is when the run() method has been completed, also compute is finished after run()!
   this.doLog("compute() x = " + this.x);
 };
-
 ==> Keep in mind: Global variables and async await may be problematic!';
 `;
   }

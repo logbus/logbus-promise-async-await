@@ -14,8 +14,6 @@ Micro tasks are only executed when the call stack is empty.
 In this example the two parts of an expression are evaluated at two different timeslots,
 the first part directly and the second part as a micro tast later.
 `;
-
-    this.solutionUrl = 'https://www.youtube.com/watch?v=bfxglBVSNDI&list=WL&index=70&t=0s';
     this.infoUrl= 'https://www.youtube.com/watch?v=cCOL7MC4Pl0&list=WL&index=66';
     this.infoUrlName = 'What is the event loop (Tasks, MikroTasks, Rendering)';
     this.code =
@@ -34,13 +32,15 @@ private async compute() {
 };
 `;
 
+    this.solutionUrl = 'https://www.youtube.com/watch?v=bfxglBVSNDI&list=WL&index=70&t=0s';
     this.solution = 
 `compute() x = 2
-run() and x = 3
+run() x = 3
 
-Now we wait for compute() to complete (see also Exercise-1)
+Now we wait for compute() to complete (see also Async-1)
 An async method implicitly returns a promise and await waits for the code
 that will be executed as a micro task as soon as the call stack is empty.
+
 ==> Keep in mind: Global variables and async await may be problematic!
 `;  
 }
