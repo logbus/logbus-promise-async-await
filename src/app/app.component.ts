@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Exercise } from './exercises/exercise'
-import { Exercise01 } from './exercises/exercise01'
-import { Exercise02 } from './exercises/exercise02'
+import { ExerciseAsync1 } from './exercises/exercise-async-1'
+import { ExerciseAsync2 } from './exercises/exercise-async-2'
 
 @Component({
   selector: 'my-app',
@@ -9,13 +9,9 @@ import { Exercise02 } from './exercises/exercise02'
   styleUrls: [ './app.component.scss' ]
 })
 export class AppComponent  {
+  public readonly exercises: Array<Exercise> = [
+    new ExerciseAsync1(), 
+    new ExerciseAsync2()
+  ];
   public currentExercise: Exercise;
-
-  public loadExercise1() {
-    this.currentExercise = new Exercise01();
-  }
-
-    public loadExercise2() {
-    this.currentExercise = new Exercise02();
-  }
 }

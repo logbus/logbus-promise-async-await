@@ -1,10 +1,11 @@
 import {lf, Exercise} from './exercise'
 
-export class Exercise02 extends Exercise {
+export class ExerciseAsync2 extends Exercise {
   private x: number;
 
   public constructor() {
     super();
+    this.name = "Async-2"
     this.info = 
   'Event Loop and Microtasks as results of promises.' + lf +
   'Microtasks are only executed when the call stack is empty.' + lf +

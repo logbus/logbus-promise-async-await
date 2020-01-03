@@ -1,15 +1,16 @@
 import {lf, Exercise} from './exercise'
 
-export class Exercise01 extends Exercise {
+export class ExerciseAsync1 extends Exercise {
   private x: number;
 
   public constructor() {
     super();
+    this.name = 'Async-1';
     this.info = 
-  'Event Loop and Microtasks as results of promises.' + lf +
-  'Microtasks are only executed when the call stack is empty.' + lf +
-  'In this example the two parts of an expression are evaluated at two different timeslots,' +lf +
-  'the first part directly and the second part as a micro tast later.';
+  `Event loop and micro tasks as results of promises.
+  Micro tasks are only executed when the call stack is empty.
+  In this example the two parts of an expression are evaluated at two different timeslots,
+  the first part directly and the second part as a micro tast later.`;
     this.solutionUrl = 'https://www.youtube.com/watch?v=bfxglBVSNDI&list=WL&index=70&t=0s';
     this.infoUrl= 'https://www.youtube.com/watch?v=cCOL7MC4Pl0&list=WL&index=66';
     this.infoUrlName = 'What is the event loop (Tasks, MikroTasks, Rendering)';
